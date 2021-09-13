@@ -16,6 +16,15 @@ html {
   font-size: 62.5%;
 }
 
+.section-heading {
+  font-size: 12rem;
+  font-weight: 900;
+  text-shadow: 0.3rem 0.3rem 0.3rem rgb(0, 0, 0);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+}
+
 /* end of common styles */
 
 /* section 1 */
@@ -29,15 +38,7 @@ html {
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-}
-
-.section-heading {
-  font-size: 12rem;
-  font-weight: 900;
-  text-shadow: 0.3rem 0.3rem 0.3rem rgb(0, 0, 0);
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 0.5rem;
+  padding-bottom: 20rem;
 }
 
 .section-1-icons i {
@@ -55,3 +56,111 @@ html {
 }
 
 /* end of section 1 */
+
+/* section 2 */
+
+.section-2 {
+  width: 100%;
+  height: 100vh;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='100%25' width='100%25'%3E%3Cdefs%3E%3Cpattern id='doodad' width='39' height='39' viewBox='0 0 40 40' patternUnits='userSpaceOnUse' patternTransform='rotate(242)'%3E%3Crect width='100%25' height='100%25' fill='rgba(72, 187, 120,1)'/%3E%3Cpath d='M0 5h40v6h-40zM0 15h40v6h-40zM0 25h40v6h-40zM0 35h40v6h-40z' fill='rgba(237, 100, 166,1)' filter='url(%23filter-doodad-1)'/%3E%3Cpath d='M 20 5a 15 15 0 0 0 0 30a 15 15 0 0 0 0-30zM-10-10h 60v 60h-60z' fill='rgba(190, 227, 248,1)' filter='url(%23filter-doodad-2)'/%3E%3C/pattern%3E%3Cfilter id='filter-doodad-1'%3E%3CfeTurbulence baseFrequency='0.01 0.5' numOctaves='2' result='result1'/%3E%3CfeDisplacementMap in2='result1' scale='10' result='result2' xChannelSelector='R' yChannelSelector='G' in='SourceGraphic'/%3E%3CfeComposite in2='result2' in='SourceGraphic' operator='atop' result='compositeGraphic'/%3E%3CfeOffset in='compositeGraphic' result='fbSourceGraphic' dx='-1'/%3E%3C/filter%3E%3Cfilter id='filter-doodad-2'%3E%3CfeTurbulence baseFrequency='0.01 0.15' numOctaves='2' result='result1'/%3E%3CfeDisplacementMap in2='result1' scale='15' result='result2' xChannelSelector='R' yChannelSelector='G' in='SourceGraphic'/%3E%3CfeComposite in2='result2' in='SourceGraphic' operator='atop' result='compositeGraphic'/%3E%3CfeOffset in='compositeGraphic' result='fbSourceGraphic' dx='-1.5'/%3E%3C/filter%3E%3C/defs%3E%3Crect fill='url(%23doodad)' height='200%25' width='200%25'/%3E%3C/svg%3E ");
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10rem 0;
+}
+
+.two {
+  color: rgb(255, 0, 255);
+  text-shadow: 0.3rem 0.3rem 0.3rem rgba(0, 255, 115, 0.9);
+}
+
+.cards-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.card {
+  width: 30rem;
+  background-color: rgb(126, 194, 221);
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 1rem 1rem 1rem rgba(0, 255, 115, 0.9);
+  position: relative;
+  transform: rotateY(20deg) skewX(-2deg);
+  transition: all 0.5s;
+}
+
+.card:hover {
+  transform: rotateY(20deg) skewX(-2deg) translateY(-3rem);
+  box-shadow: 2rem 2rem 2rem #000;
+}
+
+.card::before {
+  content: "";
+  height: 100%;
+  width: 1rem;
+  background-color: rgb(86, 167, 199);
+  position: absolute;
+  top: 0;
+  left: -1rem;
+  transform: skewY(45deg);
+  transform-origin: right;
+  box-shadow: -0.1rem -0.1rem -0.1rem #000;
+}
+
+.card::after {
+  content: "";
+  height: 1rem;
+  width: 100%;
+  background-color: rgb(92, 182, 218);
+  position: absolute;
+  top: -1rem;
+  left: 0;
+  transform: skewx(45deg);
+  transform-origin: bottom;
+  box-shadow: -0.1rem -0.1rem -0.1rem #000;
+}
+
+.card-img {
+  width: 100%;
+}
+
+.card-name {
+  font-size: 3rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  color: rgb(0, 50, 50);
+  margin: 2rem 0;
+  text-shadow: 0.15rem 0.15rem 0.15rem rgb(255, 0, 255);
+}
+
+.card-btn:link,
+.card-btn:visited {
+  width: 70%;
+  background-color: rgb(65, 0, 65);
+  color: rgb(254, 205, 254);
+  border-radius: 5rem;
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 0.2rem;
+  text-transform: capitalize;
+  text-align: center;
+  border: none;
+  padding: 0.5rem 0;
+  cursor: pointer;
+  box-shadow: -0.2rem -0.2rem 0.2rem rgb(254, 205, 254);
+  transition: all 0.2s;
+}
+
+.card-btn:hover,
+.card-btn:active {
+  box-shadow: -0.05rem -0.05rem 0.2rem rgb(254, 205, 254);
+  background-color: rgb(125, 0, 125);
+  color: rgb(0, 255, 255);
+}
+
+/* end of section 2 */
