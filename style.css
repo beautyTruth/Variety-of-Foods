@@ -277,3 +277,93 @@ html {
 }
 
 /* end of section 3 */
+
+/* section 4 */
+.section-4 {
+  position: relative;
+  width: 100%;
+  height: 30vh;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='100%25' width='100%25'%3E%3Cdefs%3E%3Cpattern id='doodad' width='34' height='34' viewBox='0 0 40 40' patternUnits='userSpaceOnUse' patternTransform='rotate(250)'%3E%3Crect width='100%25' height='100%25' fill='rgba(99, 179, 237,1)'/%3E%3Cpath d='M-20 33.5l20-20l20 20l20-20l20 20l20-20l20 20v-7l-20-20l-20 20l-20-20l-20 20l-20-20l-20 20zM-20-6.5l20-20l20 20l20-20l20 20l20-20l20 20v-7l-20-20l-20 20l-20-20l-20 20l-20-20l-20 20zM-20 73.5l20-20l20 20l20-20l20 20l20-20l20 20v-7l-20-20l-20 20l-20-20l-20 20l-20-20l-20 20z ' fill='rgba(254, 252, 191,1)' filter='url(%23filter-doodad-1)'/%3E%3Cpath d='M22.5-3l20 20l-20 20l20 20l-20 20l20 20l-20 20h-5l20-20l-20-20l20-20l-20-20l20-20l-20-20zM-17.5-3l20 20l-20 20l20 20l-20 20l20 20l-20 20h-5l20-20l-20-20l20-20l-20-20l20-20l-20-20zM62.5-3l20 20l-20 20l20 20l-20 20l20 20l-20 20h-5l20-20l-20-20l20-20l-20-20l20-20l-20-20z ' fill='rgba(252, 129, 129,1)' filter='url(%23filter-doodad-2)'/%3E%3C/pattern%3E%3Cfilter id='filter-doodad-1'%3E%3CfeTurbulence baseFrequency='0.01 0.25' numOctaves='2' result='result1'/%3E%3CfeDisplacementMap in2='result1' scale='15' result='result2' xChannelSelector='R' yChannelSelector='G' in='SourceGraphic'/%3E%3CfeComposite in2='result2' in='SourceGraphic' operator='atop' result='compositeGraphic'/%3E%3CfeOffset in='compositeGraphic' result='fbSourceGraphic' dx='-1.5'/%3E%3C/filter%3E%3Cfilter id='filter-doodad-2'%3E%3CfeTurbulence baseFrequency='0.01 0.15' numOctaves='2' result='result1'/%3E%3CfeDisplacementMap in2='result1' scale='10' result='result2' xChannelSelector='R' yChannelSelector='G' in='SourceGraphic'/%3E%3CfeComposite in2='result2' in='SourceGraphic' operator='atop' result='compositeGraphic'/%3E%3CfeOffset in='compositeGraphic' result='fbSourceGraphic' dx='-1'/%3E%3C/filter%3E%3C/defs%3E%3Crect fill='url(%23doodad)' height='200%25' width='200%25'/%3E%3C/svg%3E ");
+  display: flex;
+  justify-content: space-around;
+  padding: 3rem 0;
+  align-items: flex-start;
+}
+
+.section-4-text {
+  text-transform: uppercase;
+}
+
+.section-4-heading {
+  display: inline-block;
+  font-size: 4rem;
+  font-weight: 900;
+  color: rgb(255, 0, 247);
+  background-color: aqua;
+  padding: 0 1rem 0 1rem;
+  line-height: 1.2;
+  align-items: center;
+  transform: skewX(-20deg);
+}
+
+.section-4-paragraph {
+  font-size: 1.5rem;
+  color: aqua;
+  background-color: rgb(255, 0, 247);
+  transform: skewX(20deg) translateX(-0.5rem);
+  padding: 0 1rem 0 1rem;
+  line-height: 1.5;
+  font-weight: 900;
+}
+
+.signup-form {
+  display: flex;
+  align-items: center;
+}
+
+.signup-form-input {
+  width: 35rem;
+  height: 5rem;
+  padding: 1rem;
+  border: 0.5rem solid aqua;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  color: rgb(0, 103, 103);
+}
+
+.signup-form-input::placeholder {
+  color: rgb(255, 0, 247);
+}
+
+.signup-form-btn {
+  position: relative;
+  left: -4.5rem;
+  width: 4rem;
+  height: 4rem;
+  background-color: rgb(82, 0, 79);
+  color: rgb(2, 175, 175);
+  border: none;
+  font-size: 1.8rem;
+}
+
+.copyright {
+  position: absolute;
+  bottom: 3rem;
+  font-size: 1.7rem;
+  /* background-color: rgba(1, 233, 250, 0.701); */
+  padding: 0 1rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  /* transform: skewX(7deg); */
+  border-top: 0.1rem solid aqua;
+  padding-top: 6rem;
+  width: 100%;
+  text-align: center;
+}
+
+.year {
+  font-weight: 700;
+}
+
+/* end of section 4 */

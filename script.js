@@ -15,3 +15,7 @@ setInterval(() => {
     icon.nextElementSibling.classList.add("change");
   }
 }, 2000);
+
+const yearEl = document.querySelector(".year");
+const currentYear = new Date().getFullYear();
+yearEl.textContent = currentYear;
