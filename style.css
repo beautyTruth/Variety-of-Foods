@@ -102,7 +102,15 @@ html {
 .menu {
   width: 4rem;
   height: 6rem;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='100%25' width='100%25'%3E%3Cdefs%3E%3Cpattern id='doodad' width='31' height='31' viewBox='0 0 40 40' patternUnits='userSpaceOnUse' patternTransform='rotate(44)'%3E%3Crect width='100%25' height='100%25' fill='rgba(144, 205, 244,1)'/%3E%3Ccircle cx='-12' cy='15' r='3' fill='rgba(72, 187, 120,1)' filter='url(%23filter-doodad-1)'/%3E%3Ccircle cx='-2' cy='25' r='3' fill='rgba(72, 187, 120,1)' filter='url(%23filter-doodad-1)'/%3E%3Ccircle cx='8' cy='15' r='3' fill='rgba(72, 187, 120,1)' filter='url(%23filter-doodad-1)'/%3E%3Ccircle cx='28' cy='15' r='3' fill='rgba(72, 187, 120,1)' filter='url(%23filter-doodad-1)'/%3E%3Ccircle cx='18' cy='25' r='3' fill='rgba(72, 187, 120,1)' filter='url(%23filter-doodad-1)'/%3E%3Ccircle cx='38' cy='25' r='3' fill='rgba(72, 187, 120,1)' filter='url(%23filter-doodad-1)'/%3E%3Ccircle cx='15' cy='15' r='5' fill='rgba(246, 173, 85,1)' filter='url(%23filter-doodad-2)'/%3E%3Ccircle cx='35' cy='15' r='5' fill='rgba(246, 173, 85,1)' filter='url(%23filter-doodad-2)'/%3E%3Ccircle cx='5' cy='25' r='5' fill='rgba(246, 173, 85,1)' filter='url(%23filter-doodad-2)'/%3E%3Ccircle cx='25' cy='25' r='5' fill='rgba(246, 173, 85,1)' filter='url(%23filter-doodad-2)'/%3E%3C/pattern%3E%3Cfilter id='filter-doodad-1'%3E%3CfeTurbulence baseFrequency='0.30000000000000004' numOctaves='2' type='fractalNoise' result='result1'/%3E%3CfeDisplacementMap in2='result1' scale='5' result='result2' xChannelSelector='R' in='SourceGraphic'/%3E%3CfeComposite in2='result2' in='SourceGraphic' operator='atop' result='fbSourceGraphic'/%3E%3C/filter%3E%3Cfilter id='filter-doodad-2'%3E%3CfeTurbulence baseFrequency='0.6000000000000001' numOctaves='2' type='fractalNoise' result='result1'/%3E%3CfeDisplacementMap in2='result1' scale='3' result='result2' xChannelSelector='R' in='SourceGraphic'/%3E%3CfeComposite in2='result2' in='SourceGraphic' operator='atop' result='fbSourceGraphic'/%3E%3C/filter%3E%3C/defs%3E%3Crect fill='url(%23doodad)' height='200%25' width='200%25'/%3E%3C/svg%3E ");
+  background: rgb(247, 255, 0);
+  background: linear-gradient(
+    90deg,
+    rgba(247, 255, 0, 1) 0%,
+    rgba(2, 0, 36, 1) 7%,
+    rgba(255, 255, 0, 1) 49%,
+    rgba(15, 15, 0, 1) 93%,
+    rgba(255, 250, 0, 1) 100%
+  );
   position: fixed;
   top: 1rem;
   left: 5rem;
@@ -110,6 +118,7 @@ html {
   box-shadow: 0.1rem 0.1rem 0.1rem #390039;
   cursor: pointer;
   transition: top 0.4s 0.2s;
+  z-index: 9;
 }
 
 .menu.sparklebangs {
@@ -129,7 +138,7 @@ html {
 }
 
 .menu::after {
-  content: "PULL";
+  content: "";
   position: absolute;
   top: 6.5rem;
   left: -1.55rem;
@@ -163,6 +172,8 @@ html {
   position: absolute;
   transform: translate(-50%, -50%) scale(0);
   transition: transform 0.3s;
+
+  margin-top: 7rem;
 }
 
 .section-1-icons i.change {
@@ -482,3 +493,126 @@ html {
 }
 
 /* end of section 4 */
+
+/* responsive styling */
+
+@media (max-width: 1400px) {
+  html {
+    font-size: 50%;
+  }
+
+  .section-2 {
+    height: auto;
+    padding: 10rem 0 12rem 0;
+  }
+
+  .cards-container {
+    margin-top: 10rem;
+  }
+
+  .gallery-link {
+    width: 40rem;
+    height: 25rem;
+    margin: 5rem;
+  }
+
+  .food-img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .section-heading {
+    font-size: 9rem;
+    margin: 0 5rem;
+  }
+
+  .section-1-icons i {
+    font-size: 25rem;
+  }
+
+  .cards-container {
+    flex-wrap: wrap;
+  }
+
+  .card {
+    margin: 5rem;
+  }
+
+  .section-4 {
+    height: 30rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .navbar-link {
+    margin: 2rem;
+  }
+
+  .navbar-link i {
+    font-size: 4rem;
+  }
+
+  .navbar-link span {
+    font-size: 2rem;
+    text-transform: uppercase;
+  }
+}
+
+@media (max-width: 700px) {
+  .section-heading {
+    font-size: 7rem;
+    margin: 0 10rem;
+  }
+
+  .section-1-icons i {
+    font-size: 20rem;
+  }
+
+  .menu {
+    left: 2rem;
+  }
+
+  .navbar-link {
+    margin: 1rem;
+  }
+
+  .navbar-link i {
+    font-size: 3.5rem;
+  }
+
+  .navbar-link span {
+    font-size: 1.75rem;
+    text-transform: uppercase;
+  }
+
+  .section-4 {
+    height: 40rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 5rem;
+  }
+}
+
+@media (max-width: 550px) {
+  html {
+    font-size: 40%;
+  }
+
+  .navbar-link {
+    margin: 0 0.7rem;
+  }
+
+  .navbar-link i {
+    font-size: 4.5rem;
+  }
+
+  .navbar-link span {
+    font-size: 1.35rem;
+    text-transform: uppercase;
+  }
+}
+
+/* end of responsive design */
