@@ -19,3 +19,11 @@ setInterval(() => {
 const yearEl = document.querySelector(".year");
 const currentYear = new Date().getFullYear();
 yearEl.textContent = currentYear;
+
+// navbar code for freedom!
+
+document.querySelector(".menu").addEventListener("click", () => {
+  document.querySelectorAll(".pullmyfinger").forEach((boopie) => {
+    boopie.classList.toggle("sparklebangs");
+  });
+});
